@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="pt">
+<title>Corporativo São Judas</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/build/ol.js"></script>
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+
+</style>
+<body>
+
+<!-- Sidebar/menu -->
+
+<nav class="w3-sidebar w3-#0084c4  w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;background-color: lightblue;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+<img class="media-object img-circle" src="images/saojudas.png" alt="some text" width=167 height=53>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a>
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contato</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+
+<!-- Overlay effect when opening sidebar on small screens -->
+
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+
+    <center> <h1 style="color:#0084c4  ;" class="w3-jumbo" ><b>CORPORATIVO SÃO JUDAS</b></h1> </center>
+        <a type="submit"class="btn btn-primary w3-block w3-padding-large" style="color:white; background-color:#0084c4; border-color:#0084c4" data-toggle="modal" data-target="#myModal">Login</a>
+        <a type="submit"class="btn btn-primary w3-block w3-padding-large" style="color:white; background-color:#0084c4; border-color:#0084c4" data-toggle="modal" data-target="#myModalregistro">Cadastre-se</a>
+  </div>
+
+  <!-- Photo grid (modal) -->
+
+  <div class="w3-row-padding">
+    <div class="w3-half">
+    <img src="images/alunos.jpg" alt="some text" width=1200 height=720> </p>
+    </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+
+
+  <!-- Services -->
+
+  <!-- Designers -->
+
+  <!-- The Team -->
+
+  <!-- Packages / Pricing Tables -->
+
+  <!-- Contact -->
+  <div class="w3-container" id="contact" style="margin-top:30px">
+    <h1 style="color:#0084c4;" ><b>Contato</b></h1>
+    <p>Entre em contato com a gente para criticas, dúvidas e elogios.</p>
+    <form action="/action_page.php" target="_blank">
+      <div class="w3-section">
+        <label>Nome</label>
+        <input class="w3-input w3-border" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">
+        <label>Email</label>
+        <input class="w3-input w3-border" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">
+        <label>Mensagem</label>
+        <input class="w3-input w3-border" type="text" name="Message" required>
+      </div>
+      <button type="submit" class="btn btn-primary w3-block w3-padding-large" style="color:white; background-color:#0084c4; border-color:#0084c4">Send Message</button>
+    </form>
+  </div>
+
+        <!-- The Modal login -->
+      <div class="modal" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+
+            <!-- Modal Header login-->
+            <div class="modal-header">
+              <h4 class="modal-title">Entre com seu login e senha:</h4>
+              <form id="meuFormulario" action="perfil.html">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body login -->
+            <div class="modal-body">
+              Usuario:<br>
+              <input type="text" name="usuario" value="" id="usuario">
+              <br>
+              Senha:<br>
+              <input type="password" name="senha" value="" id="senha">
+              <br><br>
+              <button type="submit" class="btn btn-primary w3-block w3-padding-thyn">Entrar</button>
+              </form>
+            </div>
+
+            <!-- Modal footer login -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+            </div>
+          </div>
+</div>
+</div>
+
+<!-- The Modal Registro -->
+<div class="modal" id="myModalregistro">
+<div class="modal-dialog">
+  <div class="modal-content">
+
+    <!-- Modal Header Registro-->
+    <div class="modal-header">
+      <h4 class="modal-title">Qual tipo de usuario você é:</h4>
+      <form id="meuFormulario"
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+    </div>
+
+    <!-- Modal body Registro -->
+    <div class="modal-body">
+    <button type="submit" class="btn btn-primary w3-block w3-padding-thyn"data-dismiss="modal"data-toggle="modal"data-target="#myModalaluno">Aluno Vestibulando</button>
+    <button type="submit" class="btn btn-primary w3-block w3-padding-thyn"data-dismiss="modal"data-toggle="modal"data-target="#myModalusjt">Aluno São Judas</button>
+    </div>
+
+    <!-- Modal footer Registro -->
+    <div class="modal-footer">
+      <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- The Modal Aluno -->
+<div class="modal" id="myModalaluno">
+<div class="modal-dialog">
+  <div class="modal-content">
+
+    <!-- Modal Header Aluno-->
+    <div class="modal-header">
+      <h4 class="modal-title">Registre-se e faça parte desse grande projeto!</h4></h4>
+      <form id="meuFormulario"
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+    </div>
+
+    <!-- Modal body Aluno -->
+    <div class="modal-body">
+      <label>Nome</label>
+          <input class="w3-input w3-border" type="text" name="Name" required>
+        </div><div class="w3-section">
+          <label>Sobrenome</label>
+          <input class="w3-input w3-border" type="text" name="Name" required>
+        </div><div class="w3-section">
+          <label>Nascimento</label>
+          <input class="w3-input w3-border" type="text" name="Name" required>
+        </div><div class="w3-section">
+          <label>Email</label>
+          <input class="w3-input w3-border" type="text" name="Name" required>
+        </div><div class="w3-section">
+          <label>Confirmar email</label>
+          <input class="w3-input w3-border" type="text" name="Name" required>
+        </div><div class="w3-section">
+          <label>Senha</label>
+          <input class="w3-input w3-border" type="text" name="Name" required>
+        </div><div class="w3-section">
+          <label>Confirmar senha</label>
+          <input class="w3-input w3-border" type="text" name="Name" required>
+        </div>
+        <button type="submit" class="btn btn-primary w3-block w3-padding-thyn"data-toggle="modal"data-target="#myModalaluno1"data-dismiss="modal">Proximo</button>
+      </div>
+    </div>
+
+    <!-- Modal footer Aluno -->
+    <div class="modal-footer">
+      <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- The Modal Aluno 1 -->
+<div class="modal" id="myModalaluno1">
+<div class="modal-dialog">
+  <div class="modal-content">
+
+    <!-- Modal Header Aluno 1 -->
+    <div class="modal-header">
+      <h4 class="modal-title">Registre-se e faça parte desse grande projeto!</h4></h4>
+      <form id="meuFormulario"
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+    </div>
+
+    <!-- Modal body Aluno 1 -->
+
+    <div class="modal-body">
+  <label>CEP</label>
+    <input class="w3-input w3-border" type="text" name="Name" required>
+  </div><div class="w3-section">
+    <label>Endereço</label>
+    <input class="w3-input w3-border" type="text" name="Name" required>
+  </div><div class="w3-section">
+    <label>Complemento</label>
+    <input class="w3-input w3-border" type="text" name="Name" required>
+  </div><div class="w3-section">
+    <label>Cidade</label>
+    <input class="w3-input w3-border" type="text" name="Name" required>
+  </div><div class="w3-section">
+    <label>UF</label>
+    <input class="w3-input w3-border" type="text" name="Name" required>
+  </div><div class="w3-section">
+    <label>Instituição de ensino</label>
+    <input class="w3-input w3-border" type="text" name="Name" required>
+  </div>
+<button type="submit" class="btn btn-primary w3-block w3-padding-thyn"data-toggle="modal"data-target="#myModalaluno2"data-dismiss="modal">Confirmar</button>
+<button type="submit" class="btn btn-primary w3-block w3-padding-thyn"data-toggle="modal"data-target="#myModalaluno"data-dismiss="modal">Voltar</button>
+</div>
+
+    <!-- Modal footer Aluno 1 -->
+    <div class="modal-footer">
+      <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- The Modal usjt -->
+<div class="modal" id="myModalusjt">
+<div class="modal-dialog">
+  <div class="modal-content">
+
+    <!-- Modal Header usjt-->
+    <div class="modal-header">
+      <h4 class="modal-title">Registre-se e faça parte desse grande projeto!</h4></h4>
+      <form id="meuFormulario"
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+    </div>
+
+    <!-- Modal body usjt -->
+    <div class="modal-body">
+      <label>Nome</label>
+          <input class="w3-input w3-border" type="text" name="Name" required>
+        </div><div class="w3-section">
+          <label>Sobrenome</label>
+          <input class="w3-input w3-border" type="text" name="Name" required>
+        </div><div class="w3-section">
+          <label>Nascimento</label>
+          <input class="w3-input w3-border" type="text" name="Name" required>
+        </div><div class="w3-section">
+          <label>Email</label>
+          <input class="w3-input w3-border" type="text" name="Name" required>
+        </div><div class="w3-section">
+          <label>Confirmar email</label>
+          <input class="w3-input w3-border" type="text" name="Name" required>
+        </div><div class="w3-section">
+          <label>Senha</label>
+          <input class="w3-input w3-border" type="text" name="Name" required>
+        </div><div class="w3-section">
+          <label>Confirmar senha</label>
+          <input class="w3-input w3-border" type="text" name="Name" required>
+        </div>
+        <button type="submit" class="btn btn-primary w3-block w3-padding-thyn"data-toggle="modal"data-target="#myModalusjt1"data-dismiss="modal">Proximo</button>
+      </div>
+    </div>
+
+    <!-- Modal footer Aluno -->
+    <div class="modal-footer">
+      <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+    </div>
+  </div>
+</div>
+</div>
+
+    <!-- The Modal usjt 1 -->
+    <div class="modal" id="myModalusjt1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal Header usjt 1 -->
+        <div class="modal-header">
+          <h4 class="modal-title">Registre-se e faça parte desse grande projeto!</h4></h4>
+          <form id="meuFormulario"
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body usjt 1 -->
+
+        <div class="modal-body">
+      <label>CEP</label>
+        <input class="w3-input w3-border" type="text" name="Name" required>
+      </div><div class="w3-section">
+        <label>Endereço</label>
+        <input class="w3-input w3-border" type="text" name="Name" required>
+      </div><div class="w3-section">
+        <label>Complemento</label>
+        <input class="w3-input w3-border" type="text" name="Name" required>
+      </div><div class="w3-section">
+        <label>Cidade</label>
+        <input class="w3-input w3-border" type="text" name="Name" required>
+      </div><div class="w3-section">
+        <label>UF</label>
+        <input class="w3-input w3-border" type="text" name="Name" required>
+      </div><div class="w3-section">
+        <label>Curso</label>
+        <input class="w3-input w3-border" type="text" name="Name" required>
+      </div><div class="w3-section">
+        <label>Unidade</label>
+        <input class="w3-input w3-border" type="text" name="Name" required>
+      </div>
+    <button type="submit" class="btn btn-primary w3-block w3-padding-thyn"data-toggle="modal"data-target="#myModalusjt2"data-dismiss="modal">Confirmar</button>
+    <button type="submit" class="btn btn-primary w3-block w3-padding-thyn"data-toggle="modal"data-target="#myModalusjt"data-dismiss="modal">Voltar</button>
+    </div>
+
+        <!-- Modal footer usjt 1 -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">fechar</button>
+        </div>
+      </div>
+    </div>
+    </div>
+
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:40px;padding-right:58px"><p class="w3-right">Produzido para <a href="https://www.usjt.br/" title="W3.CSS" target="_blank" class="w3-hover-opacity"> SÂO JUDAS TADEU</a></p></div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Função login
+$(document).ready(function(){
+  $('#meuFormulario').on('submit', function(e){
+          e.preventDefault();
+          var len1 = $('#usuario').val();
+          var len2 = $('#senha').val();
+          if (len1 == 'adm' && len2 == '123') {
+              localStorage.setItem("usuario", $('#usuario').val());
+              localStorage.setItem("senha", $('#senha').val());
+              this.submit();
+          }else{
+            alert("Acesso NEGADO!!!")
+          }
+      });
+});
+
+
+</script>
+
+</body>
+</html>
